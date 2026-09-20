@@ -1,0 +1,621 @@
+/* ─── PostHog-Inspired Developer Design System ───────────────────────── */
+:root {
+  /* Surface & Base */
+  --bg:             #FAF9F5;
+  --bg-dots:        #E5E2D9;
+  --surface:        #FFFFFF;
+  --surface-alt:    #F4F1EA;
+  --surface-hover:  #ECE8DE;
+
+  /* Ink & Borders */
+  --ink:            #18191C;
+  --ink-mid:        #4A4C52;
+  --ink-muted:      #787980;
+  --ink-faint:      #A8A9B0;
+  --border:         #18191C;
+  --border-subtle:  #D8D5CC;
+
+  /* PostHog Signatures & Accents */
+  --accent-orange:  #F54E00;
+  --accent-orange-bg: #FFF1EB;
+  --accent-blue:    #1D63ED;
+  --accent-blue-bg: #EFF5FF;
+  --accent-rose:    #E11D48;
+  --accent-rose-bg: #FFF0F3;
+  --accent-green:   #059669;
+  --accent-green-bg:#ECFDF5;
+
+  /* Typography */
+  --font-sans:      'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:      'JetBrains Mono', 'Fira Code', Menlo, Consolas, monospace;
+
+  /* PostHog Hard Shadows */
+  --shadow-sm:      2px 2px 0px var(--border);
+  --shadow-md:      3px 3px 0px var(--border);
+  --shadow-lg:      5px 5px 0px var(--border);
+
+  --max-w:          740px;
+  --transition:     120ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ─── Reset ─────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  min-height: 100dvh;
+  /* PostHog subtle dot grid */
+  background-image: radial-gradient(var(--bg-dots) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+/* ─── Layout ──────────────────────────────────────────────────────────── */
+.container {
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+/* ─── Top Navbar ──────────────────────────────────────────────────────── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(250, 249, 245, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid var(--border);
+  padding-block: 0.85rem;
+}
+
+.nav-inner {
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo-block {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-logo-badge {
+  background: var(--border);
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.25rem 0.55rem;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  border: 1.5px solid var(--border);
+  box-shadow: 1.5px 1.5px 0px var(--border);
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.nav-logo-badge:hover {
+  background: var(--accent-orange);
+  border-color: var(--border);
+  color: #FFFFFF;
+  transform: translate(-1px, -1px);
+  box-shadow: 2.5px 2.5px 0px var(--border);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--ink-mid);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: all var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--ink);
+  background: var(--surface-alt);
+  border-color: var(--border-subtle);
+}
+
+/* ─── Hero Section ────────────────────────────────────────────────────── */
+.hero {
+  padding-top: 4.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+}
+
+.hero-pill-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  box-shadow: 0 0 0 2px rgba(5, 150, 105, 0.2);
+}
+
+.hero-name {
+  font-family: var(--font-sans);
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+}
+
+.hero-tagline {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--ink-mid);
+  max-width: 58ch;
+  line-height: 1.6;
+}
+
+.hero-tagline strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.hero-tagline code {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+  background: var(--surface-alt);
+  border: 1px solid var(--border-subtle);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  color: var(--ink);
+}
+
+/* CTA buttons with PostHog hard shadows */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.825rem;
+  font-weight: 600;
+  padding: 0.55rem 1.1rem;
+  border-radius: 6px;
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  background: var(--surface);
+  color: var(--ink);
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow-md);
+  background: var(--surface-hover);
+}
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px var(--border);
+}
+
+.btn-primary {
+  background: var(--accent-orange);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background: #E04500;
+  color: #FFFFFF;
+}
+
+.btn svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* ─── Experience Section ──────────────────────────────────────────────── */
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.section-title {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-count {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  background: var(--surface-alt);
+  border: 1px solid var(--border-subtle);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* ─── PostHog Dev Tool Experience Cards ───────────────────────────────── */
+.exp-card {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2.25rem;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.exp-card:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Window bar header */
+.exp-window-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  background: var(--surface-alt);
+  border-bottom: 1.5px solid var(--border);
+}
+
+.window-dots {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.window-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+}
+
+.dot-red { background: #FF5F56; }
+.dot-yellow { background: #FFBD2E; }
+.dot-green { background: #27C93F; }
+
+.window-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-mid);
+  letter-spacing: 0.02em;
+}
+
+.window-status {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+}
+
+.status-active {
+  background: var(--accent-green-bg);
+  color: var(--accent-green);
+  border-color: var(--accent-green);
+}
+
+.status-archived {
+  background: var(--surface);
+  color: var(--ink-muted);
+}
+
+/* Card illustration canvas */
+.exp-illustration-frame {
+  width: 100%;
+  height: 200px;
+  border-bottom: 1.5px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.illus-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Card Content Body */
+.exp-body {
+  padding: 1.75rem;
+}
+
+.exp-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.exp-company {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+.exp-period {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  background: var(--surface-alt);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+  white-space: nowrap;
+}
+
+.exp-role-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.role-polestar { color: var(--accent-blue); }
+.role-schmooze { color: var(--accent-rose); }
+.role-thinklink { color: var(--accent-green); }
+
+.exp-story {
+  font-size: 0.965rem;
+  color: var(--ink-mid);
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+.exp-story strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.exp-story code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: var(--surface-alt);
+  border: 1px solid var(--border-subtle);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+  color: var(--ink);
+}
+
+.exp-para {
+  font-size: 0.95rem;
+  color: var(--ink-mid);
+  line-height: 1.7;
+}
+
+.exp-para strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.exp-para code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: var(--surface-alt);
+  border: 1px solid var(--border-subtle);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  color: var(--ink);
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-bottom: 1.35rem;
+}
+
+.exp-item {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.925rem;
+  color: var(--ink-mid);
+  line-height: 1.6;
+}
+
+.exp-item::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink-faint);
+}
+
+.exp-item strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.exp-item code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  background: var(--surface-alt);
+  border: 1px solid var(--border-subtle);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  color: var(--ink);
+}
+
+/* Tech Tags — Monospace CLI chips */
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border-subtle);
+}
+
+.tech-chip {
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--surface-alt);
+  color: var(--ink);
+  transition: all var(--transition);
+}
+
+.tech-chip:hover {
+  background: var(--ink);
+  color: #FFFFFF;
+}
+
+/* Highlight chips for key achievements */
+.chip-highlight-blue {
+  background: var(--accent-blue-bg);
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+.chip-highlight-rose {
+  background: var(--accent-rose-bg);
+  border-color: var(--accent-rose);
+  color: var(--accent-rose);
+}
+
+.chip-highlight-green {
+  background: var(--accent-green-bg);
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+}
+
+/* ─── Footer ─────────────────────────────────────────────────────────── */
+.footer {
+  border-top: 2px solid var(--border);
+  background: var(--surface-alt);
+  padding-block: 2.5rem;
+  margin-top: 4rem;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.footer-copy {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ink-mid);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink);
+  padding: 0.25rem 0.6rem;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  border-radius: 4px;
+  transition: all var(--transition);
+}
+
+.footer-link:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow-md);
+}
+
+
+
+/* ─── Focus visible ──────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent-orange);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ─── Responsive adjustments ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .hero { padding-top: 3rem; padding-bottom: 2.5rem; }
+  .exp-illustration-frame { height: 160px; }
+  .exp-body { padding: 1.25rem; }
+  .exp-company { font-size: 1.35rem; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+}

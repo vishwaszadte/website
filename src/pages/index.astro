@@ -1,0 +1,416 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo-block">
+        <a href="/" class="nav-logo-badge">VZ</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#experience" class="nav-link">~/experience</a></li>
+        <li><a href="mailto:vishwaszadte@gmail.com" class="nav-link">~/contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-pill">
+        <span class="hero-pill-dot"></span>
+        <span>Software Engineer</span>
+      </div>
+
+      <h1 class="hero-name">Vishwas Zadte</h1>
+      
+      <p class="hero-tagline">
+        Building backend systems, distributed infrastructure, and AI applications.
+      </p>
+
+      <div class="hero-actions">
+        <a href="mailto:vishwaszadte@gmail.com" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          Get in Touch
+        </a>
+
+        <a href="https://github.com/vishwaszadte" target="_blank" rel="noopener noreferrer" class="btn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+          github.com/vishwaszadte
+        </a>
+
+        <a href="https://linkedin.com/in/vishwaszadte" target="_blank" rel="noopener noreferrer" class="btn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span>Engineering Experience</span>
+        </h2>
+        <span class="section-count">2022 to Present</span>
+      </div>
+
+      <!-- ── 01: Pole Star Global ──────────────────────────────────── -->
+      <article class="exp-card">
+        <div class="exp-window-bar">
+          <div class="window-dots">
+            <span class="window-dot dot-red"></span>
+            <span class="window-dot dot-yellow"></span>
+            <span class="window-dot dot-green"></span>
+          </div>
+          <span class="window-label">Pole Star Global</span>
+          <span class="window-status status-active">CURRENT ROLE</span>
+        </div>
+
+        <div class="exp-illustration-frame">
+          <svg class="illus-svg" viewBox="0 0 740 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <pattern id="marineGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="0" x2="24" y2="0" stroke="#CBDCF8" stroke-width="0.75" stroke-dasharray="2 2"/>
+                <line x1="0" y1="0" x2="0" y2="24" stroke="#CBDCF8" stroke-width="0.75" stroke-dasharray="2 2"/>
+              </pattern>
+            </defs>
+            <rect width="740" height="200" fill="#EDF4FC"/>
+            <rect width="740" height="200" fill="url(#marineGrid)"/>
+
+            <!-- Waterline -->
+            <line x1="0" y1="135" x2="740" y2="135" stroke="#18191C" stroke-width="2"/>
+            
+            <!-- Depth Waves -->
+            <path d="M0 148 C30 142 60 154 90 148 C120 142 150 154 180 148 C210 142 240 154 270 148 C300 142 330 154 360 148 C390 142 420 154 450 148 C480 142 510 154 540 148 C570 142 600 154 630 148 C660 142 690 154 720 148 L740 148" fill="none" stroke="#1D63ED" stroke-width="1.75" opacity="0.4"/>
+            <path d="M0 168 C40 162 80 174 120 168 C160 162 200 174 240 168 C280 162 320 174 360 168 C400 162 440 174 480 168 C520 162 560 174 600 168 C640 162 680 174 720 168" fill="none" stroke="#18191C" stroke-width="1.5" opacity="0.3"/>
+            <path d="M0 188 C35 184 70 192 105 188 C140 184 175 192 210 188 C245 184 280 192 315 188 C350 184 385 192 420 188 C455 184 490 192 525 188 C560 184 595 192 630 188 C665 184 700 192 735 188" fill="none" stroke="#1D63ED" stroke-width="1.25" opacity="0.25"/>
+
+            <!-- Cargo Container Ship -->
+            <g transform="translate(60, 68)">
+              <path d="M40 67 L60 42 L220 42 L250 67 Z" fill="#FFFFFF" stroke="#18191C" stroke-width="2.5"/>
+              <path d="M60 42 L220 42 L220 54 L50 54 Z" fill="#18191C"/>
+              
+              <rect x="75" y="16" width="30" height="26" fill="#F54E00" stroke="#18191C" stroke-width="2" rx="1"/>
+              <line x1="85" y1="16" x2="85" y2="42" stroke="#18191C" stroke-width="1.5"/>
+              <line x1="95" y1="16" x2="95" y2="42" stroke="#18191C" stroke-width="1.5"/>
+
+              <rect x="109" y="16" width="30" height="26" fill="#1D63ED" stroke="#18191C" stroke-width="2" rx="1"/>
+              <line x1="119" y1="16" x2="119" y2="42" stroke="#18191C" stroke-width="1.5"/>
+              <line x1="129" y1="16" x2="129" y2="42" stroke="#18191C" stroke-width="1.5"/>
+
+              <rect x="143" y="24" width="30" height="18" fill="#F4F1EA" stroke="#18191C" stroke-width="2" rx="1"/>
+              <line x1="153" y1="24" x2="153" y2="42" stroke="#18191C" stroke-width="1.5"/>
+              <line x1="163" y1="24" x2="163" y2="42" stroke="#18191C" stroke-width="1.5"/>
+
+              <rect x="180" y="8" width="36" height="34" fill="#FFFFFF" stroke="#18191C" stroke-width="2" rx="1"/>
+              <rect x="185" y="13" width="26" height="6" fill="#18191C" rx="1"/>
+              <line x1="198" y1="8" x2="198" y2="-4" stroke="#18191C" stroke-width="2"/>
+              <circle cx="198" cy="-5" r="3" fill="#F54E00" stroke="#18191C" stroke-width="1.5"/>
+              <circle cx="198" cy="-5" r="9" fill="none" stroke="#F54E00" stroke-width="1" stroke-dasharray="2 2" opacity="0.6"/>
+              <circle cx="198" cy="-5" r="16" fill="none" stroke="#1D63ED" stroke-width="1" stroke-dasharray="3 3" opacity="0.4"/>
+            </g>
+
+            <!-- Real-time Satellite Telemetry Route -->
+            <path d="M310 135 L380 95 L470 115 L560 70" fill="none" stroke="#1D63ED" stroke-width="2" stroke-dasharray="4 4"/>
+            <circle cx="380" cy="95" r="4.5" fill="#FFFFFF" stroke="#1D63ED" stroke-width="2.5"/>
+            <circle cx="470" cy="115" r="4.5" fill="#FFFFFF" stroke="#1D63ED" stroke-width="2.5"/>
+            <circle cx="560" cy="70" r="5" fill="#F54E00" stroke="#18191C" stroke-width="2"/>
+            <circle cx="560" cy="70" r="11" fill="none" stroke="#F54E00" stroke-width="1.5" stroke-dasharray="2 2"/>
+
+            <!-- Floating Data Panel -->
+            <g transform="translate(420, 24)">
+              <rect width="280" height="64" rx="6" fill="#FFFFFF" stroke="#18191C" stroke-width="2" filter="drop-shadow(3px 3px 0px #18191C)"/>
+              <rect x="0" y="0" width="280" height="20" rx="5" fill="#F4F1EA"/>
+              <line x1="0" y1="20" x2="280" y2="20" stroke="#18191C" stroke-width="1.5"/>
+              <circle cx="12" cy="10" r="3" fill="#1D63ED"/>
+              <rect x="22" y="7" width="60" height="6" rx="2" fill="#CBDCF8"/>
+              <rect x="245" y="7" width="24" height="6" rx="2" fill="#059669"/>
+              
+              <rect x="14" y="32" width="120" height="6" rx="2" fill="#18191C" opacity="0.8"/>
+              <rect x="14" y="44" width="180" height="6" rx="2" fill="#1D63ED"/>
+              <rect x="200" y="44" width="40" height="6" rx="2" fill="#F54E00"/>
+            </g>
+          </svg>
+        </div>
+
+        <div class="exp-body">
+          <div class="exp-title-row">
+            <h3 class="exp-company">Pole Star Global</h3>
+            <span class="exp-period">04/2024 to Present</span>
+          </div>
+
+          <div class="exp-role-badge role-polestar">
+            <span>Software Engineer &bull; Maritime Intelligence &amp; AI</span>
+          </div>
+
+          <p class="exp-story">
+            At Pole Star, I build backend systems for maritime intelligence, where <strong>reliability and zero downtime are non-negotiable</strong>. I work on our COMMS platform ingesting real-time vessel positions across global satellite networks (Inmarsat, Globalstar, Orbcomm) using <code>Python</code>, <code>Kafka</code>, and <code>AWS</code>. A major highlight for me was my hackathon project: it started as a simple <code>AWS Bedrock</code> agent doing text-to-SQL, won the internal hackathon, and is now live in production, actively used by enterprise customers and powered by <code>LangGraph</code>, <code>LangChain</code>, and <code>MCP (Model Context Protocol)</code> servers to query complex maritime insights.
+          </p>
+
+          <div class="exp-tags">
+            <span class="tech-chip chip-highlight-blue">LangGraph</span>
+            <span class="tech-chip chip-highlight-blue">LangChain</span>
+            <span class="tech-chip chip-highlight-blue">MCP Servers</span>
+            <span class="tech-chip chip-highlight-blue">AWS Bedrock</span>
+            <span class="tech-chip">Python</span>
+            <span class="tech-chip">Apache Kafka</span>
+            <span class="tech-chip">Neo4j Graph DB</span>
+            <span class="tech-chip">H3 Spatial Indexing</span>
+            <span class="tech-chip">AWS (ECS, Lambda, SQS)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── 02: Schmooze ──────────────────────────────────────────── -->
+      <article class="exp-card">
+        <div class="exp-window-bar">
+          <div class="window-dots">
+            <span class="window-dot dot-red"></span>
+            <span class="window-dot dot-yellow"></span>
+            <span class="window-dot dot-green"></span>
+          </div>
+          <span class="window-label">Schmooze</span>
+          <span class="window-status status-archived">COMPLETED</span>
+        </div>
+
+        <div class="exp-illustration-frame">
+          <svg class="illus-svg" viewBox="0 0 740 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <pattern id="pinkGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="0" x2="24" y2="0" stroke="#FCE0E7" stroke-width="0.75" stroke-dasharray="2 2"/>
+                <line x1="0" y1="0" x2="0" y2="24" stroke="#FCE0E7" stroke-width="0.75" stroke-dasharray="2 2"/>
+              </pattern>
+            </defs>
+            <rect width="740" height="200" fill="#FFF5F7"/>
+            <rect width="740" height="200" fill="url(#pinkGrid)"/>
+
+            <!-- Left Card Mockup -->
+            <g transform="translate(90, 20) rotate(-6)">
+              <rect width="160" height="150" rx="8" fill="#FFFFFF" stroke="#18191C" stroke-width="2" filter="drop-shadow(4px 4px 0px #18191C)"/>
+              <rect x="0" y="0" width="160" height="26" rx="7" fill="#F4F1EA"/>
+              <line x1="0" y1="26" x2="160" y2="26" stroke="#18191C" stroke-width="1.5"/>
+              <rect x="12" y="10" width="40" height="6" rx="2" fill="#E11D48"/>
+              <circle cx="145" cy="13" r="4" fill="#E11D48"/>
+              
+              <rect x="15" y="38" width="130" height="65" rx="4" fill="#FFF0F3" stroke="#18191C" stroke-width="1.5"/>
+              <circle cx="80" cy="65" r="18" fill="#FCE4EC" stroke="#18191C" stroke-width="1.5"/>
+              <path d="M72 68 Q80 76 88 68" fill="none" stroke="#E11D48" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="75" cy="60" r="2" fill="#18191C"/>
+              <circle cx="85" cy="60" r="2" fill="#18191C"/>
+
+              <rect x="15" y="114" width="60" height="22" rx="4" fill="#FFFFFF" stroke="#18191C" stroke-width="1.5"/>
+              <line x1="38" y1="120" x2="52" y2="130" stroke="#787980" stroke-width="2" stroke-linecap="round"/>
+              <line x1="52" y1="120" x2="38" y2="130" stroke="#787980" stroke-width="2" stroke-linecap="round"/>
+              
+              <rect x="85" y="114" width="60" height="22" rx="4" fill="#E11D48" stroke="#18191C" stroke-width="1.5"/>
+              <path d="M110 121 C110 118 113 116 115 119 C117 116 120 118 120 121 C120 125 115 128 115 128 C115 128 110 125 110 121 Z" fill="#FFFFFF"/>
+            </g>
+
+            <!-- Center Match Bubble -->
+            <g transform="translate(285, 80)">
+              <circle cx="20" cy="20" r="22" fill="#E11D48" stroke="#18191C" stroke-width="2" filter="drop-shadow(2px 2px 0px #18191C)"/>
+              <path d="M12 18 C12 14 16 11 20 16 C24 11 28 14 28 18 C28 24 20 28 20 28 C20 28 12 24 12 18 Z" fill="#FFFFFF"/>
+            </g>
+
+            <!-- Right Card Mockup -->
+            <g transform="translate(345, 15) rotate(5)">
+              <rect width="160" height="150" rx="8" fill="#FFFFFF" stroke="#18191C" stroke-width="2" filter="drop-shadow(4px 4px 0px #18191C)"/>
+              <rect x="0" y="0" width="160" height="26" rx="7" fill="#F4F1EA"/>
+              <line x1="0" y1="26" x2="160" y2="26" stroke="#18191C" stroke-width="1.5"/>
+              <rect x="12" y="10" width="50" height="6" rx="2" fill="#18191C"/>
+              <circle cx="145" cy="13" r="4" fill="#059669"/>
+
+              <rect x="15" y="38" width="130" height="28" rx="4" fill="#F4F1EA" stroke="#18191C" stroke-width="1"/>
+              <rect x="22" y="47" width="90" height="5" rx="2" fill="#18191C" opacity="0.6"/>
+              <rect x="22" y="55" width="50" height="4" rx="2" fill="#18191C" opacity="0.3"/>
+
+              <rect x="15" y="74" width="130" height="26" rx="4" fill="#ECFDF5" stroke="#059669" stroke-width="1"/>
+              <rect x="22" y="84" width="80" height="6" rx="2" fill="#059669"/>
+
+              <rect x="15" y="112" width="130" height="24" rx="4" fill="#18191C"/>
+              <rect x="50" y="121" width="60" height="6" rx="2" fill="#FFFFFF"/>
+            </g>
+
+            <!-- Metrics Telemetry Panel -->
+            <g transform="translate(535, 25)">
+              <rect width="185" height="145" rx="6" fill="#18191C" stroke="#18191C" stroke-width="2" filter="drop-shadow(3px 3px 0px #E11D48)"/>
+              <rect x="0" y="0" width="185" height="24" rx="5" fill="#2A2C33"/>
+              <circle cx="14" cy="12" r="4" fill="#059669"/>
+              <circle cx="26" cy="12" r="4" fill="#FFBD2E"/>
+              
+              <rect x="15" y="42" width="155" height="10" rx="3" fill="#2A2C33"/>
+              <rect x="15" y="42" width="125" height="10" rx="3" fill="#059669"/>
+
+              <rect x="15" y="62" width="155" height="10" rx="3" fill="#2A2C33"/>
+              <rect x="15" y="62" width="145" height="10" rx="3" fill="#F54E00"/>
+
+              <rect x="15" y="82" width="155" height="10" rx="3" fill="#2A2C33"/>
+              <rect x="15" y="82" width="95" height="10" rx="3" fill="#1D63ED"/>
+
+              <path d="M15 130 L40 120 L70 128 L100 108 L130 114 L150 96 L170 102" fill="none" stroke="#E11D48" stroke-width="2.5" stroke-linecap="round"/>
+            </g>
+          </svg>
+        </div>
+
+        <div class="exp-body">
+          <div class="exp-title-row">
+            <h3 class="exp-company">Schmooze</h3>
+            <span class="exp-period">11/2023 to 04/2024</span>
+          </div>
+
+          <div class="exp-role-badge role-schmooze">
+            <span>Software Engineer &bull; Dating App</span>
+          </div>
+
+          <p class="exp-story">
+            Schmooze was a fast-paced consumer dating startup where I was <strong>one of just 5 engineers</strong>. What mattered was what you achieved every single day, not what you planned in a sprint. This is where I learned how to move with conviction and handle real production scale: scaling backend notification and messaging systems for over <strong>200,000 daily active users</strong>, building distributed load testing with <code>Locust</code> on <code>Kubernetes</code> to sustain 300+ req/s, and shipping revenue-generating features like Popular Profiles.
+          </p>
+
+          <div class="exp-tags">
+            <span class="tech-chip chip-highlight-rose">200k+ Daily Active Users</span>
+            <span class="tech-chip chip-highlight-rose">Kubernetes</span>
+            <span class="tech-chip chip-highlight-rose">Locust Load Testing</span>
+            <span class="tech-chip">Python</span>
+            <span class="tech-chip">PostgreSQL &amp; Redis</span>
+            <span class="tech-chip">Firebase FCM</span>
+            <span class="tech-chip">High-Throughput (300 RPS)</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ── 03: ThinkLink ─────────────────────────────────────────── -->
+      <article class="exp-card">
+        <div class="exp-window-bar">
+          <div class="window-dots">
+            <span class="window-dot dot-red"></span>
+            <span class="window-dot dot-yellow"></span>
+            <span class="window-dot dot-green"></span>
+          </div>
+          <span class="window-label">ThinkLink</span>
+          <span class="window-status status-archived">COMPLETED</span>
+        </div>
+
+        <div class="exp-illustration-frame">
+          <svg class="illus-svg" viewBox="0 0 740 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <pattern id="secGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="0" x2="24" y2="0" stroke="#CCEFE0" stroke-width="0.75" stroke-dasharray="2 2"/>
+                <line x1="0" y1="0" x2="0" y2="24" stroke="#CCEFE0" stroke-width="0.75" stroke-dasharray="2 2"/>
+              </pattern>
+            </defs>
+            <rect width="740" height="200" fill="#EDFAF4"/>
+            <rect width="740" height="200" fill="url(#secGrid)"/>
+
+            <g stroke="#18191C" stroke-width="2" fill="none">
+              <path d="M0 60 L120 60 L150 90 L220 90"/>
+              <path d="M0 140 L80 140 L110 110 L180 110 L220 150 L260 150"/>
+              <path d="M80 0 L80 40 L110 70 L110 110"/>
+              <path d="M500 90 L560 90 L590 60 L740 60"/>
+              <path d="M480 150 L540 150 L570 120 L660 120 L680 140 L740 140"/>
+              <path d="M640 0 L640 40 L610 70 L610 110"/>
+            </g>
+
+            <circle cx="120" cy="60" r="4" fill="#059669" stroke="#18191C" stroke-width="2"/>
+            <circle cx="150" cy="90" r="4" fill="#FFFFFF" stroke="#18191C" stroke-width="2"/>
+            <circle cx="80" cy="140" r="4" fill="#059669" stroke="#18191C" stroke-width="2"/>
+            <circle cx="220" cy="150" r="4" fill="#FFFFFF" stroke="#18191C" stroke-width="2"/>
+            <circle cx="560" cy="90" r="4" fill="#059669" stroke="#18191C" stroke-width="2"/>
+            <circle cx="570" cy="120" r="4" fill="#FFFFFF" stroke="#18191C" stroke-width="2"/>
+            <circle cx="660" cy="120" r="4" fill="#059669" stroke="#18191C" stroke-width="2"/>
+
+            <!-- Center Microcontroller Chip Graphic -->
+            <g transform="translate(260, 45)">
+              <rect width="200" height="110" rx="8" fill="#FFFFFF" stroke="#18191C" stroke-width="2.5" filter="drop-shadow(4px 4px 0px #18191C)"/>
+              
+              <rect x="25" y="-10" width="8" height="10" fill="#059669" stroke="#18191C" stroke-width="1.5"/>
+              <rect x="55" y="-10" width="8" height="10" fill="#059669" stroke="#18191C" stroke-width="1.5"/>
+              <rect x="85" y="-10" width="8" height="10" fill="#059669" stroke="#18191C" stroke-width="1.5"/>
+              <rect x="115" y="-10" width="8" height="10" fill="#059669" stroke="#18191C" stroke-width="1.5"/>
+              <rect x="145" y="-10" width="8" height="10" fill="#059669" stroke="#18191C" stroke-width="1.5"/>
+              <rect x="175" y="-10" width="8" height="10" fill="#059669" stroke="#18191C" stroke-width="1.5"/>
+
+              <rect x="25" y="110" width="8" height="10" fill="#059669" stroke="#18191C" stroke-width="1.5"/>
+              <rect x="55" y="110" width="8" height="10" fill="#059669" stroke="#18191C" stroke-width="1.5"/>
+              <rect x="85" y="110" width="8" height="10" fill="#059669" stroke="#18191C" stroke-width="1.5"/>
+              <rect x="115" y="110" width="8" height="10" fill="#059669" stroke="#18191C" stroke-width="1.5"/>
+              <rect x="145" y="110" width="8" height="10" fill="#059669" stroke="#18191C" stroke-width="1.5"/>
+              <rect x="175" y="110" width="8" height="10" fill="#059669" stroke="#18191C" stroke-width="1.5"/>
+
+              <rect x="14" y="14" width="172" height="82" rx="4" fill="#F4F1EA" stroke="#18191C" stroke-width="1.5"/>
+              
+              <rect x="30" y="28" width="50" height="50" rx="3" fill="#D0F0E4" stroke="#059669" stroke-width="1.5"/>
+              <circle cx="55" cy="53" r="12" fill="#059669"/>
+              
+              <rect x="95" y="32" width="70" height="6" rx="2" fill="#18191C"/>
+              <rect x="95" y="44" width="55" height="6" rx="2" fill="#059669"/>
+              <rect x="95" y="56" width="65" height="6" rx="2" fill="#1D63ED"/>
+              <rect x="95" y="68" width="40" height="6" rx="2" fill="#F54E00"/>
+            </g>
+
+            <g transform="translate(60, 65)">
+              <rect width="45" height="55" rx="6" fill="#059669" stroke="#18191C" stroke-width="2" filter="drop-shadow(2px 2px 0px #18191C)"/>
+              <path d="M14 20 L14 12 Q14 2 22.5 2 Q31 2 31 12 L31 20" fill="none" stroke="#18191C" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="22.5" cy="35" r="4" fill="#FFFFFF"/>
+              <path d="M22.5 39 L22.5 45" stroke="#FFFFFF" stroke-width="2"/>
+            </g>
+
+            <g transform="translate(615, 60)">
+              <path d="M30 4 L55 12 L55 36 Q55 60 30 70 Q5 60 5 36 L5 12 Z" fill="#FFFFFF" stroke="#18191C" stroke-width="2.5" filter="drop-shadow(3px 3px 0px #18191C)"/>
+              <path d="M18 36 L26 44 L42 26" fill="none" stroke="#059669" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </svg>
+        </div>
+
+        <div class="exp-body">
+          <div class="exp-title-row">
+            <h3 class="exp-company">ThinkLink</h3>
+            <span class="exp-period">09/2022 to 10/2023</span>
+          </div>
+
+          <div class="exp-role-badge role-thinklink">
+            <span>Associate Software Engineer (previously Intern) &bull; Cybersecurity SaaS</span>
+          </div>
+
+          <p class="exp-story">
+            My first internship and job, working at a cybersecurity startup alongside <strong>talented engineers who raised the bar every single day</strong>. Even as an intern, I was trusted with real responsibility: writing design docs and owning end-to-end features across backend and DevOps. I built an SSL/TLS certificate scanner in <code>Go</code> that bumped our platform scan coverage by 20%, and helped build our asynchronous event-driven pipelines using <code>AWS SQS</code>.
+          </p>
+
+          <div class="exp-tags">
+            <span class="tech-chip chip-highlight-green">Golang</span>
+            <span class="tech-chip chip-highlight-green">Cybersecurity SaaS</span>
+            <span class="tech-chip">SSL/TLS Cert Scanning</span>
+            <span class="tech-chip">AWS (SQS, Lambda, EC2)</span>
+            <span class="tech-chip">REST APIs &amp; Security</span>
+            <span class="tech-chip">TDD &amp; CI/CD</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-copy">Vishwas Zadte &bull; {new Date().getFullYear()}</span>
+        <div class="footer-links">
+          <a href="mailto:vishwaszadte@gmail.com" class="footer-link">email</a>
+          <a href="https://github.com/vishwaszadte" target="_blank" rel="noopener noreferrer" class="footer-link">github</a>
+          <a href="https://linkedin.com/in/vishwaszadte" target="_blank" rel="noopener noreferrer" class="footer-link">linkedin</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</Layout>
